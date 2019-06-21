@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<style>
+
+		body {
+
+				background-color: #e0e2e5;
+
+			 }
+
+		table {
+
+				width: 100%;
+
+			  }
+
+		th,td	{
+
+					border-bottom: 1px solid #8d9093;
+					text-align: center;
+					padding: 10px;
+
+				}
+
+		div	{
+
+				margin-top: 20px;
+
+			}
+
+	</style>
+
+	<meta charset = UTF-8>
+
+	<title>
+
+		Results
+
+	</title>
+
+</head>
+
+<body>
+
+	<div align='center'>
+
+		<table>
+			
+			<tr>
+
+				<th>
+
+					Ticker
+
+				</th>
+
+				<th>
+
+					Predictions
+
+				</th>
+
+			</tr>
+
+			{% for row in rows %}
+
+			<tr>
+
+				<td>
+
+					{{data[row][row_ticker]}}
+
+				</td>
+
+				<td>
+
+					{{data[row][row_prediction]}}
+
+				</td>
+
+			</tr>
+
+			{% endfor %}
+
+		</table>
+
+	</div>
+
+	<div align='center'>
+
+		<table>
+			
+			<tr>
+
+				<th>
+
+					Ticker
+
+				</th>
+
+				<th>
+
+					Up (1.0)
+
+				</th>
+
+				<th>
+
+					Down (0.0)
+
+				</th>
+
+			</tr>
+
+			{% for ticker_symbol in ticker_symbols %}
+
+			<tr>
+
+				<td>
+
+					{{ticker_symbol}}
+
+				</td>
+
+				<td>
+
+					{{company_data[ticker_symbol][up]}}
+
+				</td>
+
+				<td>
+
+					{{company_data[ticker_symbol][down]}}
+
+				</td>
+
+			</tr>
+
+			{% endfor %}
+
+		</table>
+
+	</div>
+
+</body>
+
+</html>

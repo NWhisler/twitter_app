@@ -1,0 +1,7 @@
+flask
+numpy
+pandas
+xgboost
+nltk
+spacy
+afinn

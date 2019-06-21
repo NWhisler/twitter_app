@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<style>
+
+		body {
+
+				background-color: #e0e2e5;
+
+			 }
+
+		.container {
+
+						padding: 10px;
+						margin: 350px 100px 100px 0px;
+						text-align: center;
+
+				   }
+
+		.file-upload {
+
+						display: block;
+						padding-left: 75px;
+
+					 }
+
+		.submit-button {
+
+						display: block;
+						margin-top: 20px;
+
+					 }
+
+	</style>
+
+	<meta charset = UTF-8>
+
+	<title>
+
+		Twitter Model
+
+	</title>
+
+</head>
+
+<body>
+
+	<div class='container'>
+	
+		<form action='{{url_for("generate_predictions")}}' method="POST" enctype="multipart/form-data">
+
+
+			<div class='file-upload'>
+
+				Twitter Data:
+				<input name="data" type='file'> <br><br>
+
+			</div>
+
+			<div class='submit-button'>
+
+				<input type="submit" value = "Submit">
+
+			</div>
+
+		</form>
+
+	</div>
+
+</body>
+
+</html>
